@@ -1,0 +1,3 @@
+Zet hier TanMeringue.woff2 (en TanMeringue.ttf).
+De fontbestanden staan bewust NIET in deze openbare repository (betaalde licentie).
+Zonder deze bestanden valt de site terug op Fraunces.

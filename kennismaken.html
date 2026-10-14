@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kennismaken · Zjoske Kanters</title>
+<meta name="description" content="Plan een gratis Adventure Call van 30 minuten met Zjoske Kanters, of stel je vraag. Praktijk aan het Spinveld 62 in Breda.">
+<link rel="preload" href="fonts/TanMeringue.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Montserrat:ital,wght@0,400..800;1,400..600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header data-header></header>
+
+<main>
+  <section class="page-hero">
+    <div class="blob blob--1"></div>
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Gratis Adventure Call · 30 min</span>
+        <h1>Twijfel je wat <em>bij je past?</em></h1>
+        <p class="lead">Twijfelen is normaal. Je hoeft niet de ‘juiste’ keuze te maken. In een vrijblijvend gesprek van een half uur kijken we samen waar je tegenaan loopt, wat je wilt veranderen en of mijn manier van werken bij je past.</p>
+      </div>
+      <ol class="steps" style="grid-template-columns:1fr">
+        <li class="reveal"><h4>Je laat iets van je horen</h4><p>Via het formulier, WhatsApp of mail. Kies wat voor jou het makkelijkst voelt.</p></li>
+        <li class="reveal"><h4>We plannen een moment</h4><p>Ik stuur je een paar opties. Het gesprek is telefonisch of online.</p></li>
+        <li class="reveal"><h4>We voelen samen</h4><p>Wat heeft jouw systeem nu nodig? Je krijgt een eerlijk advies, zonder verplichting.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="contact">
+    <div class="wrap split" style="align-items:start">
+      <form class="form reveal" data-demo-form="contact" novalidate>
+        <div class="stack" style="margin-bottom:.6rem"><span class="eyebrow">Plan je call of stel je vraag</span><h2 style="font-size:var(--step-3)">Laat <em>van je horen.</em></h2></div>
+        <div class="two">
+          <div class="field"><label for="c-naam">Naam</label><input id="c-naam" type="text" required autocomplete="name"></div>
+          <div class="field"><label for="c-mail">E-mailadres</label><input id="c-mail" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="c-tel">Telefoon (mag leeg)</label><input id="c-tel" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="c-onderwerp">Waar gaat het over?</label>
+            <select id="c-onderwerp">
+              <option>Gratis Adventure Call</option>
+              <option>Losse sessie</option>
+              <option>Traject</option>
+              <option>Meditatie of online programma</option>
+              <option>Zakelijk of team</option>
+              <option>Iets anders</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="c-bericht">Wat speelt er? (zoveel of zo weinig als je wilt)</label><textarea id="c-bericht"></textarea></div>
+        <button class="btn" type="submit" style="justify-self:start">Verstuur <span class="arr">→</span></button>
+        <p class="form-note">Ik reageer meestal binnen twee werkdagen.</p>
+      </form>
+      <div class="contact-card reveal">
+        <h3>Of neem direct contact op</h3>
+        <div class="contact-line"><span>WhatsApp / tel</span><b>+31 6 40285436</b><button class="copy" type="button" data-copy="+31640285436">Kopieer</button></div>
+        <div class="contact-line"><span>E-mail</span><b>info@zjoskekanters.nl</b><button class="copy" type="button" data-copy="info@zjoskekanters.nl">Kopieer</button></div>
+        <div class="contact-line"><span>Praktijk</span><b>Spinveld 62, 4815 HT Breda</b></div>
+        <div class="btn-row"><a class="btn btn--light" href="https://wa.me/31640285436" target="_blank" rel="noopener">Stuur een WhatsApp <span class="arr">→</span></a><a class="btn btn--ghost" href="https://www.instagram.com/zjoskekanters" target="_blank" rel="noopener">Instagram</a></div>
+        <div class="photo" style="aspect-ratio:16/10;margin-top:.6rem"><img src="img/praktijk-breda.jpg" alt="De praktijkruimte in Breda" width="1600" height="901" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap stack-lg">
+      <div class="stack reveal"><span class="eyebrow">Veelgestelde vragen</span><h2>Laat je inspireren door <em>de vragen van anderen.</em></h2></div>
+      <div>
+        <div class="faq-filter" role="group" aria-label="Filter vragen">
+          <button type="button" data-cat="alle" aria-pressed="true">Alles</button>
+          <button type="button" data-cat="sessie" aria-pressed="false">Losse sessies</button>
+          <button type="button" data-cat="traject" aria-pressed="false">Trajecten</button>
+          <button type="button" data-cat="online" aria-pressed="false">Online</button>
+          <button type="button" data-cat="zakelijk" aria-pressed="false">Zakelijk</button>
+        </div>
+        <div class="faq">
+          <details data-cat="sessie traject zakelijk"><summary>Wat gebeurt er in de Adventure Call?</summary><div><p>We bespreken waar je tegenaan loopt, wat je wilt veranderen en of mijn werkwijze aansluit. Je zit nergens aan vast.</p></div></details>
+          <details data-cat="sessie traject"><summary>Is dit therapie of coaching?</summary><div><p>Een mix van beide, afgestemd op waar jij staat. Soms helend, soms richtinggevend.</p></div></details>
+          <details data-cat="sessie traject zakelijk"><summary>Heb ik ervaring nodig met lichaamswerk, breathwork of familieopstellingen?</summary><div><p>Nee. We werken stap voor stap en altijd in afstemming met jouw draagkracht.</p></div></details>
+          <details data-cat="sessie"><summary>Is breathwork veilig bij trauma?</summary><div><p>Ja, mits zorgvuldig begeleid. Bij TRB werk ik altijd met afstemming en draagkracht.</p></div></details>
+          <details data-cat="sessie"><summary>Hoe boek ik een sessie?</summary><div><p>Via de knop bij de sessie of dit formulier. Daarna krijg je een intakeformulier, en na goedkeuring een definitieve bevestiging.</p></div></details>
+          <details data-cat="traject"><summary>Is een traject niet te intens?</summary><div><p>De intensiteit zit in eerlijk kijken en voelen, niet in hard werken. We nemen de tijd, en juist daardoor ervaren mensen meer rust.</p></div></details>
+          <details data-cat="traject sessie"><summary>Waar vinden de sessies plaats?</summary><div><p>Fysiek in mijn praktijk in Breda. Insight Calls en tussentijds contact zijn online of telefonisch.</p></div></details>
+          <details data-cat="online"><summary>Zijn de meditaties een eenmalige aankoop?</summary><div><p>Ja. Je betaalt één keer, zonder abonnement, en ze blijven voor altijd van jou.</p></div></details>
+          <details data-cat="online"><summary>Waar en wanneer kan ik luisteren?</summary><div><p>Waar en wanneer je wilt: thuis, onderweg of voor het slapen.</p></div></details>
+          <details data-cat="zakelijk"><summary>Kan mijn werkgever dit vergoeden?</summary><div><p>Dat komt regelmatig voor, via een ontwikkel-, vitaliteits- of individueel keuzebudget.</p></div></details>
+          <details data-cat="zakelijk"><summary>Hoeveel sessies heb ik meestal nodig?</summary><div><p>Dat verschilt. Sommigen merken na één sessie al verschil, anderen kiezen een kort traject om nieuw gedrag te verankeren.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer data-footer></footer>
+<script src="main.js"></script>
+</body>
+</html>
