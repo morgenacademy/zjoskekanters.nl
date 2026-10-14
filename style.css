@@ -39,6 +39,10 @@
   --text-soft: #7f5145;
   --on-dark: var(--offwhite);
   --on-dark-soft: #ecc9b8;
+  /* oude namen, zodat alles blijft werken */
+  --accent: #e0124a;
+  --deep-ink: var(--offwhite);
+  --deep-soft: var(--on-dark-soft);
 
   /* — Kleurvlakken: aarde als basis, accent als gloed — */
   --earth: radial-gradient(60% 80% at 92% 8%, rgba(252,129,3,.42) 0%, transparent 60%),
@@ -277,7 +281,7 @@ h2 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.12e
 .stat:hover { transform: translateY(-6px) rotate(-1deg); }
 .stat b { font: 400 clamp(2.2rem, 1.4rem + 2.2vw, 3.3rem)/1 var(--f-display); color: var(--bordeaux); font-variant-numeric: tabular-nums; }
 .stat:nth-child(2) b { color: var(--bruin); }
-.stat:nth-child(3) b { color: var(--poeder); }
+.stat:nth-child(3) b { color: var(--bordeaux); }
 .stat:nth-child(4) b { color: var(--roze); }
 .stat strong { font: 700 11px var(--f-body); letter-spacing: .16em; text-transform: uppercase; color: var(--bordeaux); margin-top: .4rem; }
 .stat span { font-size: var(--step--1); color: var(--text-soft); }
@@ -393,10 +397,10 @@ h2 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.12e
 @media (max-width: 860px) { .detail aside { position: static; } }
 .detail h3 { font-size: var(--step-3); }
 .detail h3 .muted { font-family: var(--f-body); font-size: .4em; letter-spacing: .12em; font-weight: 700; vertical-align: middle; }
-.detail h3 em { color: var(--roze); }
-.tag { display: inline-flex; align-self: start; justify-self: start; padding: .45em 1em; border-radius: 999px; background: var(--poeder); color: var(--offwhite); font-weight: 700; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; }
+.detail h3 em { color: #e0124a; }
+.tag { display: inline-flex; align-self: start; justify-self: start; padding: .45em 1em; border-radius: 999px; background: var(--bordeaux); color: var(--offwhite); font-weight: 700; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; }
 .tag--orange { background: var(--bruin); }
-.tag--pink { background: var(--bordeaux); }
+.tag--pink { background: var(--poeder); color: var(--bordeaux); }
 .tag--line { background: transparent; border: 1px solid var(--poeder); color: var(--bruin); }
 .facts { display: grid; grid-template-columns: auto 1fr; gap: .6rem 1.2rem; margin: 0; padding: 1.25rem 1.4rem; background: var(--card); border-radius: var(--radius-sm); border: 1px solid var(--line); }
 .facts dt { font-weight: 700; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-soft); padding-top: .4em; }
@@ -427,10 +431,10 @@ h2 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.12e
 .product .cover b { font: 400 var(--step-2)/1.15 var(--f-display); color: var(--offwhite); text-align: center; padding: 1.5rem; text-wrap: balance; }
 .cover--sleep { background: radial-gradient(70% 70% at 75% 20%, rgba(202,129,123,.7), transparent 60%), linear-gradient(160deg, #884133, #4a1c13); }
 .cover--morning { background: radial-gradient(70% 70% at 80% 15%, rgba(252,129,3,.55), transparent 60%), linear-gradient(160deg, #ca817b, #d9bda9); }
-.cover--morning b { color: var(--bordeaux); }
+.product .cover--morning b { color: var(--bordeaux); }
 .cover--trigger { background: var(--wine); }
 .cover--clean { background: radial-gradient(70% 70% at 25% 20%, #fff7f0, transparent 60%), linear-gradient(160deg, #d9bda9, #ca817b); }
-.cover--clean b { color: var(--bordeaux); }
+.product .cover--clean b { color: var(--bordeaux); }
 .cover--free { background: radial-gradient(70% 70% at 70% 85%, rgba(251,41,90,.45), transparent 60%), linear-gradient(160deg, #ca817b, #884133); }
 .cover--program { background: var(--earth); }
 .product .cover .tag { position: absolute; top: 14px; left: 14px; background: var(--offwhite); color: var(--bordeaux); }
@@ -556,3 +560,20 @@ h2 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.12e
   .stat b { font-size: 1.9rem; }
   .offer { max-width: 380px; margin-inline: auto; width: 100%; }
 }
+
+/* ---------- Leesbaarheid op donkere vlakken ----------
+   Alles wat binnen een donker (bordeaux/bruin) vlak staat, wordt licht. */
+.section--deep .facts, .page-hero .facts, .glow .facts { background: rgba(248,235,222,.08); border-color: rgba(248,235,222,.25); }
+.section--deep .facts dd, .page-hero .facts dd, .glow .facts dd { color: var(--offwhite); }
+.section--deep .facts dt, .page-hero .facts dt, .glow .facts dt { color: var(--on-dark-soft); }
+.section--deep .say li, .glow .say li { color: var(--offwhite); border-left-color: var(--oranje); }
+.section--deep .brings, .glow .brings { background: rgba(248,235,222,.08); color: var(--offwhite); }
+.section--deep .brings strong, .glow .brings strong { color: var(--offwhite); }
+.section--deep .timeline b { color: var(--offwhite); }
+.section--deep .chip { background: rgba(248,235,222,.1); border-color: rgba(248,235,222,.25); color: var(--offwhite); }
+.section--deep .textlink, .glow .textlink { color: var(--offwhite); }
+.section--deep figcaption { color: var(--on-dark-soft); }
+
+/* roze accentwoord op lichte achtergrond: een tikje dieper roze, zodat het goed leesbaar blijft */
+h1 em, h2 em, h3 em, .intro .big em { color: #e0124a; }
+.section--deep h2 em, .glow h2 em, .page-hero h1 em, .photo-hero h1 em, .site-footer h2 em, .hero-earth h1 em { color: #ffc9ad; }
