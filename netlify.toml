@@ -1,0 +1,51 @@
+# Netlify: statische site, geen build-stap. De hoofdmap is de website.
+[build]
+  publish = "."
+  command = ""
+
+# Foto's en fonts lang in de browser bewaren (sneller laden)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Oude Wix-adressen doorsturen naar de nieuwe pagina's (behoud van Google-vindbaarheid)
+[[redirects]]
+  from = "/voorthuis"
+  to = "/voor-thuis.html"
+  status = 301
+[[redirects]]
+  from = "/lossesessies"
+  to = "/sessies.html"
+  status = 301
+[[redirects]]
+  from = "/trajecten"
+  to = "/trajecten.html"
+  status = 301
+[[redirects]]
+  from = "/zakelijk"
+  to = "/zakelijk.html"
+  status = 301
+[[redirects]]
+  from = "/about"
+  to = "/over.html"
+  status = 301
+[[redirects]]
+  from = "/call"
+  to = "/kennismaken.html"
+  status = 301
+[[redirects]]
+  from = "/product-page/*"
+  to = "/voor-thuis.html"
+  status = 301
